@@ -93,3 +93,5 @@ _Valerio De Sanctis_ is a skilled IT professional with 20 years of experience 
 - [Angular for Enterprise Applications - Third Edition](https://www.packtpub.com/product/angular-for-enterprise-applications-third-edition/9781805127123)
 - [Apps and Services with .NET 8 - Second Edition](https://www.packtpub.com/product/apps-and-services-with-net-8-second-edition/9781837637133)
 
+## Errata
+- Chapter 9: While executing the file `city-edit.component.html`, use the async pipe in the template (for example, `*ngFor="let country of countries | async"`) (clear the browser as well). The error is because the template is trying to iterate over an Observable instead of the array it emits.
