@@ -1,7 +1,7 @@
 # Netlify Configuration for Angular
 [build]
   base = "full stack asp/WorldCities/worldcities.client"
-  publish = "dist/worldcities.client"
+  publish = "dist"
   command = "npm install && npm run build -- --configuration production"
 
 # Redirect all routes to index.html for Angular routing (SPA)
