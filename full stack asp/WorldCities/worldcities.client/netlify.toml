@@ -1,6 +1,6 @@
 # Netlify Configuration for Angular
 [build]
-  base = "."
+  base = "full stack asp/WorldCities/worldcities.client"
   publish = "dist/worldcities.client"
   command = "npm install && npm run build -- --configuration production"
 
