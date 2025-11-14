@@ -1,12 +1,12 @@
+// Declare process for TypeScript (Netlify injects env vars at build time)
+declare const process: any;
+
 export const environment = {
   production: true,
-  // Update this with your production API URL after deployment
-  // For Azure: https://worldcities-api-[yourname].azurewebsites.net/
-  // For Railway: https://your-app.railway.app/
-  // For Render: https://your-app.onrender.com/
-  // Note: Environment variables from Netlify/Vercel are injected at build time
-  // If using Netlify/Vercel, set API_URL environment variable there
+  // Update this with your production API URL
+  // For Azure: https://worldcities-api-garrette.azurewebsites.net/
+  // Netlify will replace API_URL at build time if set as environment variable
   baseUrl: (typeof process !== 'undefined' && process.env && process.env['API_URL']) 
     ? process.env['API_URL'] + '/' 
-    : "https://localhost:40443/" // Default - UPDATE THIS with your Azure backend URL
+    : "https://worldcities-api-garrette.azurewebsites.net/" // Your Azure backend URL
 };
