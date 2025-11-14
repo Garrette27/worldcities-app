@@ -5,6 +5,12 @@
   command = "npm install && npm run build -- --configuration production"
 
 # Redirect all routes to index.html for Angular routing (SPA)
+# Handle root and all paths
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
