@@ -1,0 +1,56 @@
+# Build outputs
+**/bin/
+**/obj/
+**/dist/
+**/publish/
+**/node_modules/
+**/.angular/
+**/.angular/cache/
+
+# IDE
+**/.vs/
+**/.vscode/
+**/.idea/
+*.user
+*.suo
+*.sln.docstates
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment files (keep structure, but don't commit secrets)
+**/appsettings.Development.json
+**/.env
+**/.env.local
+**/.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Test coverage
+coverage/
+*.lcov
+
+# Package manager
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# Azure
+.azure/
+
+# User secrets
+**/secrets.json
+

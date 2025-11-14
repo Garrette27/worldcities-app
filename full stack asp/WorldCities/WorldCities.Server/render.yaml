@@ -1,0 +1,30 @@
+# Render.com deployment configuration
+services:
+  - type: web
+    name: worldcities-api
+    env: dotnet
+    buildCommand: cd WorldCities.Server && dotnet publish -c Release -o ./publish
+    startCommand: cd WorldCities.Server/publish && dotnet WorldCities.Server.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://+:10000
+      - key: PORT
+        value: 10000
+    # Add your environment variables here:
+    # - key: ConnectionStrings__DefaultConnection
+    #   sync: false  # Set this in Render dashboard
+    # - key: JwtSettings__SecurityKey
+    #   sync: false
+    # - key: JwtSettings__Issuer
+    #   sync: false
+    # - key: JwtSettings__Audience
+    #   sync: false
+
+databases:
+  - name: worldcities-db
+    databaseName: worldcities
+    user: worldcities_user
+    plan: free  # Free tier PostgreSQL
+
